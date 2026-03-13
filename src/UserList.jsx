@@ -10,6 +10,7 @@ function UserList() {
   useEffect(() => {
     const getUsers = async () => {
       try {
+        // Load the user list once when the component mounts.
         const response = await axios.get('https://jsonplaceholder.typicode.com/users')
         setListOfUser(response.data)
       } catch {

@@ -1,16 +1,66 @@
-# React + Vite
+# User Directory App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React app that fetches and displays a list of users from the JSONPlaceholder API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Fetches users with `axios`
+- Uses `useEffect` to load data when the component mounts
+- Uses `useState` to store users, loading state, and error state
+- Displays users in responsive React Bootstrap cards
+- Includes a clean, modern UI with custom styling
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- Axios
+- React Bootstrap
+- Bootstrap
 
-## Expanding the ESLint configuration
+## API Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `https://jsonplaceholder.typicode.com/users`
+
+## Project Structure
+
+```text
+src/
+  App.jsx
+  App.css
+  UserList.jsx
+  index.css
+  main.jsx
+```
+
+## Getting Started
+
+1. Install dependencies:
+
+	```bash
+	npm install
+	```
+
+2. Start the development server:
+
+	```bash
+	npm run dev
+	```
+
+3. Build for production:
+
+	```bash
+	npm run build
+	```
+
+## How It Works
+
+- `App.jsx` renders the page header and the `UserList` component.
+- `UserList.jsx` fetches API data and maps each user into a Bootstrap card.
+- `main.jsx` loads Bootstrap CSS globally.
+- `App.css` and `index.css` handle the custom look and layout.
+
+## Notes
+
+- The app uses mock data from JSONPlaceholder, so no authentication is required.
+- If the API request fails, the app shows a simple error message.
